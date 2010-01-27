@@ -1,0 +1,94 @@
+have_header: checking for mysql.h... -------------------- yes
+
+"/usr/bin/gcc-4.2 -o conftest -I/opt/local/include/ruby-1.9.1/i386-darwin10 -I/opt/local/include/ruby-1.9.1/ruby/backward -I/opt/local/include/ruby-1.9.1 -I. -I/opt/local/include/mysql5/mysql -I/opt/local/include -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE  -I/opt/local/include -O2 -arch x86_64 -O2 -g -Wall -Wno-parentheses  -fno-common -pipe -fno-common conftest.c  -L. -L/opt/local/lib -L/opt/local/lib -L/opt/local/lib/mysql5/mysql -L/opt/local/lib/ -L. -L/opt/local/lib -L/usr/local/lib     -lruby-static  -lpthread -ldl -lobjc  "
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: int main() {return 0;}
+/* end */
+
+"/usr/bin/gcc-4.2 -E -I/opt/local/include/ruby-1.9.1/i386-darwin10 -I/opt/local/include/ruby-1.9.1/ruby/backward -I/opt/local/include/ruby-1.9.1 -I. -I/opt/local/include/mysql5/mysql -I/opt/local/include -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE  -I/opt/local/include -O2 -arch x86_64 -O2 -g -Wall -Wno-parentheses  -fno-common -pipe -fno-common  conftest.c -o conftest.i"
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: #include <mysql.h>
+/* end */
+
+--------------------
+
+have_library: checking for main() in -lmysqlclient... -------------------- yes
+
+"/usr/bin/gcc-4.2 -o conftest -I/opt/local/include/ruby-1.9.1/i386-darwin10 -I/opt/local/include/ruby-1.9.1/ruby/backward -I/opt/local/include/ruby-1.9.1 -I. -I/opt/local/include/mysql5/mysql -I/opt/local/include -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE  -I/opt/local/include -O2 -arch x86_64 -O2 -g -Wall -Wno-parentheses  -fno-common -pipe -fno-common conftest.c  -L. -L/opt/local/lib -L/opt/local/lib -L/opt/local/lib/mysql5/mysql -L/opt/local/lib/ -L. -L/opt/local/lib -L/usr/local/lib     -lruby-static -lmysqlclient  -lpthread -ldl -lobjc  "
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: /*top*/
+4: int main() {return 0;}
+5: int t() { void ((*volatile p)()); p = (void ((*)()))main; return 0; }
+/* end */
+
+--------------------
+
+have_func: checking for mysql_query()... -------------------- yes
+
+"/usr/bin/gcc-4.2 -o conftest -I/opt/local/include/ruby-1.9.1/i386-darwin10 -I/opt/local/include/ruby-1.9.1/ruby/backward -I/opt/local/include/ruby-1.9.1 -I. -I/opt/local/include/mysql5/mysql -I/opt/local/include -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE  -I/opt/local/include -O2 -arch x86_64 -O2 -g -Wall -Wno-parentheses  -fno-common -pipe -fno-common conftest.c  -L. -L/opt/local/lib -L/opt/local/lib -L/opt/local/lib/mysql5/mysql -L/opt/local/lib/ -L. -L/opt/local/lib -L/usr/local/lib    -lmysqlclient  -lruby-static -lmysqlclient  -lpthread -ldl -lobjc  "
+conftest.c: In function ‘t’:
+conftest.c:5: error: ‘mysql_query’ undeclared (first use in this function)
+conftest.c:5: error: (Each undeclared identifier is reported only once
+conftest.c:5: error: for each function it appears in.)
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: /*top*/
+4: int main() {return 0;}
+5: int t() { void ((*volatile p)()); p = (void ((*)()))mysql_query; return 0; }
+/* end */
+
+"/usr/bin/gcc-4.2 -o conftest -I/opt/local/include/ruby-1.9.1/i386-darwin10 -I/opt/local/include/ruby-1.9.1/ruby/backward -I/opt/local/include/ruby-1.9.1 -I. -I/opt/local/include/mysql5/mysql -I/opt/local/include -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE  -I/opt/local/include -O2 -arch x86_64 -O2 -g -Wall -Wno-parentheses  -fno-common -pipe -fno-common conftest.c  -L. -L/opt/local/lib -L/opt/local/lib -L/opt/local/lib/mysql5/mysql -L/opt/local/lib/ -L. -L/opt/local/lib -L/usr/local/lib    -lmysqlclient  -lruby-static -lmysqlclient  -lpthread -ldl -lobjc  "
+conftest.c: In function ‘t’:
+conftest.c:5: warning: implicit declaration of function ‘mysql_query’
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: /*top*/
+4: int main() {return 0;}
+5: int t() { mysql_query(); return 0; }
+/* end */
+
+--------------------
+
+have_func: checking for mysql_ssl_set()... -------------------- yes
+
+"/usr/bin/gcc-4.2 -o conftest -I/opt/local/include/ruby-1.9.1/i386-darwin10 -I/opt/local/include/ruby-1.9.1/ruby/backward -I/opt/local/include/ruby-1.9.1 -I. -I/opt/local/include/mysql5/mysql -I/opt/local/include -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE  -I/opt/local/include -O2 -arch x86_64 -O2 -g -Wall -Wno-parentheses  -fno-common -pipe -fno-common conftest.c  -L. -L/opt/local/lib -L/opt/local/lib -L/opt/local/lib/mysql5/mysql -L/opt/local/lib/ -L. -L/opt/local/lib -L/usr/local/lib    -lmysqlclient  -lruby-static -lmysqlclient  -lpthread -ldl -lobjc  "
+conftest.c: In function ‘t’:
+conftest.c:5: error: ‘mysql_ssl_set’ undeclared (first use in this function)
+conftest.c:5: error: (Each undeclared identifier is reported only once
+conftest.c:5: error: for each function it appears in.)
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: /*top*/
+4: int main() {return 0;}
+5: int t() { void ((*volatile p)()); p = (void ((*)()))mysql_ssl_set; return 0; }
+/* end */
+
+"/usr/bin/gcc-4.2 -o conftest -I/opt/local/include/ruby-1.9.1/i386-darwin10 -I/opt/local/include/ruby-1.9.1/ruby/backward -I/opt/local/include/ruby-1.9.1 -I. -I/opt/local/include/mysql5/mysql -I/opt/local/include -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE  -I/opt/local/include -O2 -arch x86_64 -O2 -g -Wall -Wno-parentheses  -fno-common -pipe -fno-common conftest.c  -L. -L/opt/local/lib -L/opt/local/lib -L/opt/local/lib/mysql5/mysql -L/opt/local/lib/ -L. -L/opt/local/lib -L/usr/local/lib    -lmysqlclient  -lruby-static -lmysqlclient  -lpthread -ldl -lobjc  "
+conftest.c: In function ‘t’:
+conftest.c:5: warning: implicit declaration of function ‘mysql_ssl_set’
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: /*top*/
+4: int main() {return 0;}
+5: int t() { mysql_ssl_set(); return 0; }
+/* end */
+
+--------------------
+
